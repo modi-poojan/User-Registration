@@ -16,7 +16,12 @@ public class User_Main {
 		
 		System.out.println("Enter Last Name: \n");
 		String lname = scan.next();
-		System.out.println(call.validate_firstName(lname));
+		System.out.println(call.validate_lastName(lname));
+		
+
+		System.out.println("Enter email: \n");
+		String email = scan.next();
+		System.out.println(call.validate_E_Mail(email));
 		
 		
 	scan.close();	
