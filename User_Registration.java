@@ -6,8 +6,9 @@ import java.util.regex.Pattern;
 public class User_Registration {
 
 	final String NAME = "^[A-Z][a-zA-Z]{2,}$";
-	final String E_MAIL = "^[\\w]+(.[\\w-]+)+@[\\w]+[.]([\\w]{1,2}.)*[a-zA-Z]{2,}$";
+	final String E_MAIL = "^[\\w-]+(\\.[\\w-]+)*@[\\w]+[.]([\\w]{1,2}.)*[a-zA-Z]{2,}$";
 	final String PHONE_NUMBER = "^^[0-9]{1,3}[\\s][0-9]{10}$"; 
+	final String PASSWORD = "^.{8,}$";
 	
 	public boolean validate_firstName(String Fname) {
 		
@@ -34,6 +35,13 @@ public class User_Registration {
 		
 		Pattern pattern = Pattern.compile(PHONE_NUMBER);
 		Matcher matcher = pattern.matcher(number);
+		return matcher.matches();
+	}
+	
+	public boolean validate_password(String password) {
+		
+		Pattern pattern = Pattern.compile(PASSWORD);
+		Matcher matcher = pattern.matcher(password);
 		return matcher.matches();
 	}
 	
