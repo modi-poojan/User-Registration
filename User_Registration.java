@@ -8,7 +8,7 @@ public class User_Registration {
 	final String NAME = "^[A-Z][a-zA-Z]{2,}$";
 	final String E_MAIL = "^[\\w-]+(\\.[\\w-]+)*@[\\w]+[.]([\\w]{1,2}.)*[a-zA-Z]{2,}$";
 	final String PHONE_NUMBER = "^^[0-9]{1,3}[\\s][0-9]{10}$"; 
-	final String PASSWORD = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+	final String PASSWORD = "^(?=.*[A-Z])(?=.*[0-9])(?=[^_\\W]*[_\\W][^_\\W]*$).{8,}$";
 	
 	public boolean validate_firstName(String Fname) {
 		
