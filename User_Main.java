@@ -30,7 +30,7 @@ public class User_Main {
 		String password = scan.next();
 		System.out.println(call.validate_E_Mail(password));
 		
-		
+		System.out.println("Adding a scentence");		
 	scan.close();	
 	}
 }
