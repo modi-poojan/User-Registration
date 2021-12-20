@@ -1,6 +1,0 @@
-package com.javaRegex;
-
-public enum TypeOfException {
-
-	INVALID_FIRST_NAME,INVALID_LAST_NAME,INVALID_EMAIL,INVALID_MOBILE_NUMBER,INVALID_PASSWORD;
-}
