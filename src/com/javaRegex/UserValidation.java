@@ -10,7 +10,7 @@ public class UserValidation {
 	final String PHONE_NUMBER = "^^[0-9]{1,3}[\\s][0-9]{10}$"; 
 	final String PASSWORD = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
 	
-	public IValidateName firstNameValidation = (Fname) ->{
+	public IValidateName nameValidation = (Fname) ->{
 		
 		Pattern pattern = Pattern.compile(NAME);
 		Matcher matcher = pattern.matcher(Fname);

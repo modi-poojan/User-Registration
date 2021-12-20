@@ -10,7 +10,7 @@ public class UserJunitTest {
 	@Test
 	public void firstName_True() {
 		try {
-			boolean output = call.firstNameValidation.validate_Name("Kunal");
+			boolean output = call.nameValidation.validate_Name("Kunal");
 			assertEquals(true, output);
 		}
 		catch(UserRegisterationExceptions exception_) {
@@ -21,7 +21,7 @@ public class UserJunitTest {
 	@Test
 	public void firstName_False()  {
 		try {
-			boolean output = call.firstNameValidation.validate_Name("joey");
+			boolean output = call.nameValidation.validate_Name("joey");
 			assertEquals(false, output);
 		}
 		catch(UserRegisterationExceptions exception_) {
@@ -32,7 +32,7 @@ public class UserJunitTest {
 	@Test
 	public void lastName_True() throws UserRegisterationExceptions {
 		try {
-			boolean output = call.firstNameValidation.validate_Name("Agrawal");
+			boolean output = call.nameValidation.validate_Name("Agrawal");
 			assertEquals(true, output);
 		}
 		catch(UserRegisterationExceptions exception_) {
@@ -43,7 +43,7 @@ public class UserJunitTest {
 	@Test
 	public void lastName_False() {
 		try {
-			boolean output = call.firstNameValidation.validate_Name("agrawal");
+			boolean output = call.nameValidation.validate_Name("agrawal");
 			assertEquals(false, output);
 		}
 		catch(UserRegisterationExceptions exception_) {
