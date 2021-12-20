@@ -22,10 +22,11 @@ public class JunitEmail {
 		this.result = result;
 	}
 
-	User_Registration call = new User_Registration();
+	UserValidation call = new UserValidation();
 	
 	@Parameters
-	public static Collection email() {
+	public static Collection email() { 
+		
 		return Arrays.asList(new Object[][] {
 			
 			{"abc@yahoo.com", true},
@@ -57,8 +58,13 @@ public class JunitEmail {
 	
 	@Test
 	public void  validate_E_Mail() {
-	boolean output = call.validate_E_Mail(input);
-	assertEquals(result, output);
+		try {
+			boolean output = call.emailValidation.validate_E_Mail(input);
+			assertEquals(result, output);
+		}
+		catch(UserRegisterationExceptions exception_){
+			exception_.printStackTrace();
+		}
 }
 }
 

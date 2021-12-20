@@ -10,12 +10,12 @@ public class UserRegisterationExceptions extends Exception {
 	
 	}
 	
-	 public UserRegisterationExceptions(String message) {
+	public UserRegisterationExceptions(String message) {
 		 super();
 		 this.messgae = message;
 	 }
 	 
-	 public UserRegisterationExceptions(String message, TypeOfException type) {
+	public UserRegisterationExceptions(String message, TypeOfException type) {
 		 super();
 		 this.messgae = message;
 		 this.type = type;
